@@ -40,10 +40,57 @@ h1, h2, h3, h4, h5, h6 {
   font-family: titulofont ;
 }
 
+ /*Inicio del Navbar 
+    **********************************
+    */
+
+ 
+  /*Fin del Navbar 
+     **********************************
+     */
+
 
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+/*------- Letra consola----------*/
+
+.console-container {
+  font-size: 7em;
+  color: #fff;
+}
+@media screen and (max-width: 800px) {
+ .console-container{
+     font-size: 3em !important;
+     color: #fff;
+ }
+ .letra-above{
+     font-size: 1rem !important;
+ }
+}
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+  display: inline-block;
+  position: relative;
+}
+
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/*-----------fin Letra consola----------*/
 
 #hero {
   width: 100%;
