@@ -29,27 +29,28 @@
 
 <body>
   <!---Navbar-->
-  <div id="scroll-black">
-    <div class="menu-logo">
-      <img src="assets/img/logo.png" alt="" width="100">
-      <!--<span class="">Ventos</span>-->
-    </div>
-
-    <div class="menu-icon">
-      <span class="menu-icon__line menu-icon__line-left"></span>
-      <span class="menu-icon__line"></span>
-      <span class="menu-icon__line menu-icon__line-right"></span>
-    </div>
+  <div class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-black py-3 shadow-sm">
+      <div class="container"><a class="navbar-brand" href="#">
+          <img src="assets/img/logo.png" alt="" width="130"></a>
+        <button class="navbar-toggler navbar-toggler-right bg-white d-none" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active nav__list-item"><a class="nav-link text-white" href="#">INICIO <span
+                  class="sr-only">(current)</span></a></li>
+            <li class="nav-item pl-5 nav__list-item"><a class="nav-link text-white" href="#">NOSOTROS</a></li>
+            <li class="nav-item pl-5 nav__list-item"><a class="nav-link text-white" href="#">SERVICIO</a></li>
+            <li class="nav-item pl-5 nav__list-item"><a class="nav-link text-white" href="#">CONTACTOS</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </div>
-  <div class="nav">
-    <div class="nav__content">
-      <ul class="nav__list">
-        <li class="nav__list-item"><a href="index.html">Inicio</a></li>
-        <li class="nav__list-item"><a href="nosotros.html">Nosotros</a></li>
-        <li class="nav__list-item"><a href="nosotros.html">Servicios</a></li>
-        <li class="nav__list-item"><a href="nosotros.html">Contactos</a></li>
-      </ul>
-    </div>
+
+  <div>
+
   </div>
   <!--fin del navbar-->
 
@@ -155,7 +156,7 @@
 
 
     <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/nosotros.js"></script>
 
 </body>
 
