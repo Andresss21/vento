@@ -1,0 +1,361 @@
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+@font-face {
+  font-family: regularfont;
+  src: url(../fonts/Avenir45Book.otf);
+}
+
+@font-face {
+  font-family: titulofont;
+  src: url(../fonts/Avenir45Book_Oblique.otf);
+}
+
+
+  body {
+  font-family: regularfont;
+  color: #444444;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.image-background{
+  background: url("../img/VENTO_LOGISTICS.jpg") top center no-repeat;
+  background-size: cover;
+}
+
+a {
+  color: #5e91a8;
+}
+
+a:hover {
+  color: #5e91a8;
+  ;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: titulofont ;
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+#hero {
+  width: 100%;
+  height: 100vh;
+}
+
+#hero:before {
+  content: "";
+  
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#hero h2 {
+  color: #fff;
+  margin: 10px 0 0 0;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    text-align: center;
+    padding-top: 58px;
+  }
+  #hero h1 {
+    font-size: 28px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-height: 500px) {
+  #hero {
+    height: 120vh;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #ffe313;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+  
+}
+
+.section-bg {
+  padding: 120px 0;
+  color: #fff;
+}
+
+.section-bg:before {
+  content: "";
+  background: linear-gradient(180deg, rgba(0,55,77,1) 0%, rgba(45,113,138,1) 100%);
+  position: absolute;
+  bottom: 60px;
+  top: 60px;
+  left: 0;
+  right: 0;
+}
+
+.section-white {
+  margin: 0 2rem;
+  position: relative;
+  background-color: #fff;
+}
+
+.margen{
+  padding: 4.5rem 0;
+}
+
+.section-gradient{
+  background: #f7941d;
+ 
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# index primera seccion
+--------------------------------------------------------------*/
+.texto-blanco{
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about .container {
+  position: relative;
+  z-index: 10;
+}
+
+.about .content {
+  padding: 30px 30px 30px 0;
+}
+
+.about .content h3 {
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.about .content p {
+  margin-bottom: 30px;
+}
+
+
+.about .icon-boxes .icon-box {
+  margin-top: 30px;
+}
+
+.about .icon-boxes .icon-box i {
+  font-size: 40px;
+  color: #5e91a8;
+  margin-bottom: 10px;
+}
+
+.about .icon-boxes .icon-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.about .icon-boxes .icon-box p {
+  font-size: 15px;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .about .content {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    text-align: center;
+  }
+}
+
+
+
+
+
+/*-------------------------------------------
+ PAGINA DE NOSOTROS
+ -------------------------------------------*/
+
+ /*------------------------------------------
+ INICIO DE NOSOTROS
+ -------------------------------------------*/
+#nosotros {
+  width: 100%;
+  height: 75vh;
+  background: url("https://images.pexels.com/photos/1181438/pexels-photo-1181438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") top center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#nosotros:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#nosotros h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#nosotros h2 {
+  color: #fff;
+  margin: 10px 0 0 0;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #nosotros {
+    text-align: center;
+    padding-top: 58px;
+  }
+  #nosotros h1 {
+    font-size: 28px;
+  }
+  #nosotros h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-height: 500px) {
+  #nosotros {
+    height: 120vh;
+  }
+}
+
+
+/*----------------------------------
+Primera seccion
+-----------------------------------*/
+
+#seccionuno{
+  color: #000;
+}
+
+.section-two {
+  margin: 0 2rem;
+  padding: 8.5rem 0;
+  color: #fff;
+}
+
+.section-two:before {
+  content: "";
+  background: rgba(45,113,138,1);
+  position: absolute;
+  bottom: 60px;
+  top: 60px;
+  left: 0;
+  right: 0;
+  
+}
+
+.services .icon-box {
+  margin-bottom: 20px;
+  padding: 30px;
+  border-radius: 6px;
+  background: #252525;
+  transition: 0.3s;
+}
+
+.services .icon-box:hover {
+  background: #2b2b2b;
+}
+
+.services .icon-box i {
+  float: left;
+  color: #5e91a8;
+  font-size: 40px;
+}
+
+.services .icon-box h4 {
+  margin-left: 70px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.services .icon-box h4 a {
+  color: #fff;
+  transition: 0.3s;
+}
+
+.services .icon-box h4 a:hover {
+  text-decoration: underline;
+}
+
+.services .icon-box .icon-box:hover h4 a {
+  color: #5e91a8;
+}
+
+.services .icon-box p {
+  margin-left: 70px;
+  line-height: 24px;
+  font-size: 14px;
+}
