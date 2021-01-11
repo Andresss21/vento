@@ -144,14 +144,13 @@ h1, h2, h3, h4, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
   overflow: hidden;
   position: relative;
 }
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   position: relative;
 }
 
@@ -178,8 +177,10 @@ section {
 
 .section-title p {
   margin-bottom: 0;
-  
+  padding-left: 15%;
+  padding-right: 15%;
 }
+
 
 .section-bg {
   padding: 120px 0;
@@ -288,10 +289,11 @@ section {
  -------------------------------------------*/
 #nosotros {
   width: 100%;
-  height: 75vh;
-  background: url("https://images.pexels.com/photos/1181438/pexels-photo-1181438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") top center no-repeat;
+  height: 80vh;
+  background: url("https://www.hfsv.org/download/datasets/4922/LBLA%20Web4.jpg") top center no-repeat;
   background-size: cover;
   position: relative;
+  margin-top: -110px;
 }
 
 #nosotros:before {
@@ -344,6 +346,7 @@ Primera seccion
 
 #seccionuno{
   color: #000;
+  margin-bottom: -50px;
 }
 
 .section-two {
@@ -354,7 +357,7 @@ Primera seccion
 
 .section-two:before {
   content: "";
-  background: rgba(45,113,138,1);
+  background:#00374d;
   position: absolute;
   bottom: 60px;
   top: 60px;
