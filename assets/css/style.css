@@ -650,17 +650,19 @@ Primera seccion
   margin-bottom: 20px;
   padding: 30px;
   border-radius: 6px;
-  background: #252525;
+  background: #ffff;
   transition: 0.3s;
+  color: #1b1b1b;
 }
 
 .services .icon-box:hover {
-  background: #2b2b2b;
+-webkit-box-shadow: 0px 13px 30px -5px #000000; 
+box-shadow: 0px 13px 30px -5px #000000;
 }
 
 .services .icon-box i {
   float: left;
-  color: #5e91a8;
+  color: #2d718a;
   font-size: 40px;
 }
 
@@ -671,8 +673,8 @@ Primera seccion
   font-size: 18px;
 }
 
-.services .icon-box h4 a {
-  color: #fff;
+.services .icon-box h4 a p {
+  color: #1b1b1b;
   transition: 0.3s;
 }
 
@@ -689,3 +691,8 @@ Primera seccion
   line-height: 24px;
   font-size: 14px;
 }
+
+
+/*--------------------------------------------
+MISION/ VISION
+---------------------------------------------*/
