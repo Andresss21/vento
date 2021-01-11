@@ -477,6 +477,14 @@ section {
 .section-white {
   margin: 0 2rem;
   position: relative;
+  padding: 8.5rem 0;
+  background-color: #fff;
+}
+
+.sub-section-white {
+  margin: 0 2rem;
+  position: relative;
+  padding: 1.5rem 0;
   background-color: #fff;
 }
 
