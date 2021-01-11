@@ -669,7 +669,7 @@ Primera seccion
 }
 
 .services .icon-box:hover {
--webkit-box-shadow: 0px 13px 30px -5px #000000; 
+-webkit-box-shadow: 0px 13px 30px -5px #000000;
 box-shadow: 0px 13px 30px -5px #000000;
 }
 
@@ -850,7 +850,7 @@ Fin de pagina de Servicio
 
 
 /*----------------------------------
-CSS MAPA 
+CSS MAPA
 -----------------------------------*/
 
 /* CSS MAPA */
@@ -875,7 +875,7 @@ CSS MAPA
 		 -o-transition:all 0.75s ease-out;
 }
 .dot:hover .ping1 { width:116px;height:116px; margin-left:-60px;margin-top:-60px; }
-.dot:hover .ping2{width:66px;height:66px;margin-left:-35px;margin-top:-35px; 
+.dot:hover .ping2{width:66px;height:66px;margin-left:-35px;margin-top:-35px;
 	   -moz-transition-delay:0.2s;
 	-webkit-transition-delay:0.2s;
 	     -o-transition-delay:0.2s;
