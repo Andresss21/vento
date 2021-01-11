@@ -3,13 +3,38 @@ AOS.init({
  });
 
  /**************** Menu ********************** */
- 
+ const app = (() => {
+  let body;
+  let menu;
+  let menuItems;
+
+  const init = () => {
+    body = document.querySelector('body');
+    menu = document.querySelector('.menu-icon');
+    menuItems = document.querySelectorAll('.nav-lista');
+
+    applyListeners();
+  };
+
+  const applyListeners = () => {
+    menu.addEventListener('click', () => toggleClass(body, 'nav-active'));
+  };
+
+  const toggleClass = (element, stringClass) => {
+    if (element.classList.contains(stringClass))
+    element.classList.remove(stringClass);else
+
+    element.classList.add(stringClass);
+  };
+
+  init();
+})();
 
 /****************************************** */
 
 /********************HEader letras********************* */
 // function([string1, string2],target id,[color1,2])    
-consoleText(['EL SALVADOR', 'PANAMA', 'GUATEMALA', 'HONDURAS', 'COSTA RICA', 'NICARAGUA',  'CENTRO AMERICA'])
+consoleText(['EL SALVADOR', 'PANAMÁ', 'GUATEMALA', 'HONDURAS', 'COSTA RICA', 'NICARAGUA',  'CENTRO AMÉRICA'])
 
 function consoleText(words, id = 'text') {
   var visible = true
