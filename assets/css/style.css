@@ -25,6 +25,13 @@ body {
   background-size: cover;
 }
 
+@media screen and (max-width: 993px) {
+ .image-background{
+  background-position-y: -198px;
+  background-position-x: -229px;
+ }
+}
+
 a {
   color: #5e91a8;
 }
