@@ -505,6 +505,13 @@ section {
   color: #fff;
 }
 
+.negro{
+  color: #1b1b1b;
+}
+
+.grande{
+  font-size: 1.5rem;
+}
 
 .img-fluid{
 width: 100%;
