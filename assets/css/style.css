@@ -1,7 +1,7 @@
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 @font-face {
   font-family: regularfont;
   src: url(../fonts/Avenir45Book.otf);
@@ -12,8 +12,7 @@
   src: url(../fonts/Avenir45Book_Oblique.otf);
 }
 
-
-  body {
+body {
   font-family: regularfont;
   color: #444444;
   position: relative;
@@ -21,7 +20,7 @@
   overflow-y: auto;
 }
 
-.image-background{
+.image-background {
   background: url("../img/VENTO_LOGISTICS.jpg") top center no-repeat;
   background-size: cover;
 }
@@ -37,36 +36,315 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: titulofont ;
+  font-family: titulofont;
 }
 
- /*Inicio del Navbar 
+/*Inicio del Navbar 
     **********************************
     */
 
- 
-  /*Fin del Navbar 
+/**Efecto del menu**/
+
+.btn-border {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 2em;
+  cursor: pointer;
+  overflow: hidden;
+  width: 150px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.btn-border:before, .btn-border:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.btn-border:before {
+  top: 0;
+}
+
+.btn-border:after {
+  bottom: 0;
+}
+
+.btn-border:hover>*>*:before, .btn-border:hover>*>*:after {
+  transform: translate3d(0, 0, 0);
+}
+
+.btn-border:hover>*>*>*:before, .btn-border:hover>*>*>*:after {
+  transform: translate3d(0, 0, 0);
+}
+
+.btn-border>*:before, .btn-border>*:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: transparent;
+  ;
+}
+
+.btn-border>*:before {
+  left: 0;
+}
+
+.btn-border>*:after {
+  right: 0;
+}
+
+.btn-border>*>*:before, .btn-border>*>*:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 9;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.btn-border>*>*:before {
+  top: 0;
+  transform: translate3d(-105%, 0, 0);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-border>*>*:after {
+  bottom: 0;
+  transform: translate3d(105%, 0, 0);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-border>*>*>*:before, .btn-border>*>*>*:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  height: 100%;
+  width: 2px;
+  background-color: #fff;
+}
+
+.btn-border>*>*>*:before {
+  left: 0;
+  transform: translate3d(0, 105%, 0);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-border>*>*>*:after {
+  right: 0;
+  transform: translate3d(0, -105%, 0);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/**Efecto del menu**/
+
+/**Esconder metawidth menu***/
+
+.show {
+  display: none;
+}
+
+@media screen and (max-width: 993px) {
+  .esconder {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+}
+
+/**Esconder metawidth menu***/
+
+/***Menu mobil**/
+
+.menu-icon {
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  z-index: 2;
+  left: 75%;
+  top: 48px;
+  cursor: pointer;
+}
+
+.menu-logo {
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  z-index: 2;
+  left: 5%;
+  top: 1%;
+  cursor: pointer;
+}
+
+.menu-icon__line {
+  height: 2px;
+  width: 30px;
+  display: block;
+  background-color: #ffffff;
+  margin-bottom: 4px;
+  transition: transform 0.2s ease, background-color 0.5s ease;
+}
+
+.menu-icon__line-left {
+  width: 15px;
+}
+
+.menu-icon__line-right {
+  width: 15px;
+  float: right;
+}
+
+.nav {
+  position: fixed;
+  z-index: 1;
+}
+
+.nav:before, .nav:after {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(234, 234, 234, 0.2);
+  z-index: -1;
+  transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+  transform: translateX(0%) translateY(-100%);
+}
+
+.nav:after {
+  background: white;
+  transition-delay: 0s;
+}
+
+.nav:before {
+  transition-delay: 0.1s;
+}
+
+.nav__content {
+  position: fixed;
+  top: 40%;
+  transform: translate(0%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: calc(2vw + 10px);
+  font-weight: 200;
+  cursor: pointer;
+  left: 15%;
+}
+
+.nav-lista {
+  position: relative;
+  display: flex;
+  transition-delay: 0.8s;
+  opacity: 0;
+  transform: translate(0%, 100%);
+  transition: opacity 0.2s ease, transform 0.3s ease;
+  margin-right: 25px;
+}
+
+.nav-lista:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  top: 100%;
+  transform: translate(0%, 0%);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.nav-lista:hover:before {
+  width: 100%;
+}
+
+body.nav-active .menu-icon__line {
+  background-color: #000;
+  transform: translateX(0px) rotate(-45deg);
+}
+
+body.nav-active .menu-icon__line-left {
+  transform: translateX(1px) rotate(45deg);
+}
+
+body.nav-active .menu-icon__line-right {
+  transform: translateX(-2px) rotate(45deg);
+}
+
+body.nav-active .nav {
+  visibility: visible;
+}
+
+body.nav-active .nav:before, body.nav-active .nav:after {
+  transform: translateX(0%) translateY(0%);
+}
+
+body.nav-active .nav:after {
+  transition-delay: 0.1s;
+}
+
+body.nav-active .nav:before {
+  transition-delay: 0s;
+}
+
+body.nav-active .nav-lista {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+body.nav-active .nav-lista:nth-child(0) {
+  transition-delay: 0.5s;
+}
+
+body.nav-active .nav-lista:nth-child(1) {
+  transition-delay: 0.6s;
+}
+
+body.nav-active .nav-lista:nth-child(2) {
+  transition-delay: 0.7s;
+}
+
+body.nav-active .nav-lista:nth-child(3) {
+  transition-delay: 0.8s;
+}
+
+body.nav-active .nav-lista:nth-child(4) {
+  transition-delay: 0.9s;
+}
+
+/***Fin del menu mobil**/
+
+/*Fin del Navbar 
      **********************************
      */
-
 
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
 /*------- Letra consola----------*/
 
 .console-container {
   font-size: 7em;
   color: #fff;
+  font-family: regularfont;
 }
+
 @media screen and (max-width: 800px) {
- .console-container{
-     font-size: 3em !important;
-     color: #fff;
- }
- .letra-above{
-     font-size: 1rem !important;
- }
+  .console-container {
+    font-size: 3em !important;
+    color: #fff;
+  }
+  .letra-above {
+    font-size: 1rem !important;
+  }
 }
 
 .typed-cursor {
@@ -80,13 +358,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes blink {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
   50% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -94,12 +372,11 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
 }
 
 #hero:before {
   content: "";
-  
   position: absolute;
   bottom: 0;
   top: 0;
@@ -143,6 +420,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
+
 section {
   padding: 60px 0;
   overflow: hidden;
@@ -162,7 +440,6 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  
 }
 
 .section-title h2::after {
@@ -178,7 +455,6 @@ section {
 
 .section-title p {
   margin-bottom: 0;
-  
 }
 
 .section-bg {
@@ -188,7 +464,7 @@ section {
 
 .section-bg:before {
   content: "";
-  background: linear-gradient(180deg, rgba(0,55,77,1) 0%, rgba(45,113,138,1) 100%);
+  background: linear-gradient(180deg, rgba(0, 55, 77, 1) 0%, rgba(45, 113, 138, 1) 100%);
   position: absolute;
   bottom: 60px;
   top: 60px;
@@ -202,26 +478,27 @@ section {
   background-color: #fff;
 }
 
-.margen{
+.margen {
   padding: 4.5rem 0;
 }
 
-.section-gradient{
+.section-gradient {
   background: #f7941d;
- 
   color: #fff;
 }
 
 /*--------------------------------------------------------------
 # index primera seccion
 --------------------------------------------------------------*/
-.texto-blanco{
+
+.texto-blanco {
   color: #fff;
 }
 
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+
 .about .container {
   position: relative;
   z-index: 10;
@@ -240,7 +517,6 @@ section {
 .about .content p {
   margin-bottom: 30px;
 }
-
 
 .about .icon-boxes .icon-box {
   margin-top: 30px;
@@ -275,17 +551,14 @@ section {
   }
 }
 
-
-
-
-
 /*-------------------------------------------
  PAGINA DE NOSOTROS
  -------------------------------------------*/
 
- /*------------------------------------------
+/*------------------------------------------
  INICIO DE NOSOTROS
  -------------------------------------------*/
+
 #nosotros {
   width: 100%;
   height: 75vh;
@@ -337,12 +610,11 @@ section {
   }
 }
 
-
 /*----------------------------------
 Primera seccion
 -----------------------------------*/
 
-#seccionuno{
+#seccionuno {
   color: #000;
 }
 
@@ -354,13 +626,12 @@ Primera seccion
 
 .section-two:before {
   content: "";
-  background: rgba(45,113,138,1);
+  background: rgba(45, 113, 138, 1);
   position: absolute;
   bottom: 60px;
   top: 60px;
   left: 0;
   right: 0;
-  
 }
 
 .services .icon-box {

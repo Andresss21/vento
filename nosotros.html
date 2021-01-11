@@ -28,31 +28,69 @@
 </head>
 
 <body>
-  <!---Navbar-->
-  <div class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-light bg-black py-3 shadow-sm">
-      <div class="container"><a class="navbar-brand" href="#">
-          <img src="assets/img/logo.png" alt="" width="130"></a>
-        <button class="navbar-toggler navbar-toggler-right bg-white d-none" type="button" data-toggle="collapse"
-          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active nav__list-item"><a class="nav-link text-white" href="#">INICIO <span
-                  class="sr-only">(current)</span></a></li>
-            <li class="nav-item pl-5 nav__list-item"><a class="nav-link text-white" href="#">NOSOTROS</a></li>
-            <li class="nav-item pl-5 nav__list-item"><a class="nav-link text-white" href="#">SERVICIO</a></li>
-            <li class="nav-item pl-5 nav__list-item"><a class="nav-link text-white" href="#">CONTACTOS</a></li>
-          </ul>
-        </div>
+   <!--Navbar Desktop-->
+   <nav class="navbar navbar-expand-lg navbar-light bg-black py-3 sticky-top esconder">
+    <div class="container"><a class="navbar-brand" href="#">
+        <img src="assets/img/logo.png" alt="" width="130"></a>
+      <button class="navbar-toggler navbar-toggler-right bg-white d-none" type="button"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mt-4">
+          <li class="nav-item active nav__list-item"><a class="nav-link text-white btn-border" href="#">
+            <span>
+              <span>
+                <span>INICIO</span>
+              </span>
+            </span>
+          </a></li>
+          <li class="nav-item pl-3 nav__list-item"><a class="nav-link text-white btn-border" href="#"><span>
+            <span>
+              <span>NOSOTROS</span>
+            </span>
+          </span></a></li>
+          <li class="nav-item pl-3 nav__list-item"><a class="nav-link text-white btn-border" href="#"><span>
+            <span>
+              <span>SERVICIO</span>
+            </span>
+          </span></a></li>
+          <li class="nav-item pl-3 nav__list-item"><a class="nav-link text-white btn-border" href="#"><span>
+            <span>
+              <span>CONTACTOS</span>
+            </span>
+          </span></a></li>
+        </ul>
       </div>
-    </nav>
+
+    </div>
+  </nav>
+ <!--Fin de Navbar Desktop-->
+
+  <!--Navbar Mobile-->
+  <div class="show">
+    <div class="menu-logo">
+      <img src="assets/img/logo.png" alt="" width="120"></a>
+    </div>
+    <div class="menu-icon">
+      <span class="menu-icon__line menu-icon__line-left"></span>
+      <span class="menu-icon__line"></span>
+      <span class="menu-icon__line menu-icon__line-right"></span>
+    </div>
+    
+    <div class="nav">
+      <div class="nav__content">
+        <ul class="nav__list">
+          <li class="nav-lista py-4">INICIO</li>
+          <li class="nav-lista py-4">NOSOTROS</li>
+          <li class="nav-lista py-4">SERVICIO</li>
+          <li class="nav-lista py-4">CONTACTOS</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <div>
+  <!--Fin de Navbar Mobile-->
 
-  </div>
-  <!--fin del navbar-->
 
   <!-- ======= Hero Section ======= -->
   <section id="nosotros" class="d-flex align-items-center">
@@ -91,7 +129,7 @@
     </section><!-- End Primera seccion -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-two " data-aos="fade-left">
+    <section id="services" class="services section-two " data-aos="fade-up">
       <div class="container">
 
         <div class="section-title">
